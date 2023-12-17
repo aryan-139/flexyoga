@@ -26,7 +26,7 @@ const participantSchema = new Schema(
             required: true,
         },
         enrollments:{
-            type: Array,
+            type: String,
             required: false,
         }
     }

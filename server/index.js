@@ -6,6 +6,9 @@ const helmet=require('helmet');
 const mongoose=require('mongoose');
 const dotenv=require('dotenv');
 const { MongoClient, ServerApiVersion } = require('mongodb');
+const participantRoute=require('./routes/participantRoute');
+// const enrollmentRoutes=require('./routes/enrollmentRoute');
+const batchRoutes=require('./routes/batchRoute');
 
 const PORT=8001;
 const app=express();
@@ -59,7 +62,8 @@ app.listen(PORT, ()=>{
     console.log(`server is running on port ${PORT}`);
 });
 
-//create a GET route
-app.get('/',(req,res)=>{
-    res.send('GET request to the homepage');
-});
+
+// routes 
+
+app.use("/participants", participantRoute);
+app.use("/batches", batchRoutes);
