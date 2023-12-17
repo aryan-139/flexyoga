@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+body{
+  background-position: 180px 10px;
+  background-image: url('./assets/yogabg2.jpg');
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
 
 .App-logo {
   height: 40vmin;

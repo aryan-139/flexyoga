@@ -13,6 +13,11 @@ const participantSchema = new Schema(
             required: true,
             unique: false
         },
+        email: {
+            type: String,
+            required: true,
+            unique: false
+        },  
         age: {
             type: Number,
             required: true,
