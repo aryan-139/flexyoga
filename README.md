@@ -13,7 +13,7 @@
   "name": "John Doe",
   "age": 30,
   "gender": "Male",
-  "phone": "123-456-7890",
+  "phone": "1234567890",
   "enrollments": "A1"
 }
 ```
@@ -32,6 +32,9 @@
     "end_time": "7:00 AM"
 }
 ```
+
+### 4. Delete all the entries from the participants collection
+- GET (http://localhost:8001/participants/delete)
 
 ### 4. getting all the existing batches
 
