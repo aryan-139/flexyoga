@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, Button, Checkbox, FormControl, FormControlLabel, InputLabel, MenuItem, Radio, RadioGroup, Select, TextField, Typography } from '@mui/material';
-import yogabg from '../assets/yogabg.jpg';
+import { LinearProgress, Box, Button, Checkbox, FormControl, FormControlLabel, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material';
 import { validateAge, validateEmail,validateContact, validateName } from '../utils/validators';
+//import ErrorModal from '../components/errorModal';
 
 const Practiser = () => {
   const [firstName, setFirstName] = React.useState('');
@@ -13,6 +13,8 @@ const Practiser = () => {
   const [gender, setGender] = React.useState('');
   const [batch, setBatch] = React.useState('');
   const [terms, setTerms] = React.useState(false);
+  const [progress, setProgress] = React.useState(0);
+  //const [closeErrorModal, setCloseErrorModal] = React.useState(false);
 
   const handleSubmit = (e) => {
     const fullname = firstName + ' ' + lastName;
@@ -46,12 +48,50 @@ const Practiser = () => {
       enrollments: batch,
       terms: terms
     }
+    //cached in local storage
+    localStorage.setItem("data", JSON.stringify(data));
     console.log(data);
+
+
     e.preventDefault();
   }
 
+  //handle progress bar
+  React.useEffect(() => {
+      if(firstName!==""){
+        setProgress(10);
+      }
+      if(lastName!==""){
+        setProgress(20);
+      }
+      if(email!==""){
+        setProgress(30);
+      }
+      if(phone!==""){
+        setProgress(40);
+      }
+      if(age!==""){
+        setProgress(50);
+      }
+      if(batch!==""){
+        setProgress(70);
+      }
+      if(gender!==""){
+        setProgress(80);
+      }
+      if(terms){
+        setProgress(100);
+      }
+  },[firstName, lastName, email, phone, age, batch, gender, terms]);
+  
+
   return (
     <div>
+      <LinearProgress
+      variant="determinate"
+      value={progress}
+      sx={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 10000 }}
+    />
       {/* form component */}
       <Box sx={{ display: 'flex', flexDirection: 'column', width: '700px', margin: '0 auto', backgroundColor:"#b4c9c1", marginLeft:"70px", marginTop:"40px" }}>
         <Box sx={{border: "4px solid white",backgroundColor:"#064c31", width: "634px", height:"700px", marginLeft:"30px", marginRight:"50px",marginTop:"30px", marginBottom:"30px", color:"white"}}>
