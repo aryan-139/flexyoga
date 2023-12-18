@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Practiser from './pages/practiser'; 
 import Navbar from './components/navbar';
 import Payment from './pages/payment';
+import Successful from './pages/successful';
+import Failed from './pages/failed';
 
 
 const root = createRoot(document.getElementById('root'));
@@ -18,6 +20,8 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/practiser" element={<Practiser />} /> 
         <Route path="/payment" element={<Payment />} />
+        <Route path="/successful" element={<Successful />} />
+        <Route path="/failed" element={<Failed />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

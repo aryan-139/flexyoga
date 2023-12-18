@@ -13,6 +13,10 @@ const Payment = () => {
     const data=JSON.parse(storedData);
     console.log(data);
     //localStorage.clear();
+    if(data!=null)
+    window.location.href = '/successful';
+    else
+    window.location.href = '/failed';
   };
 
   return (
