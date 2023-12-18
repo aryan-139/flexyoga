@@ -19,9 +19,26 @@
     + [4. getting all the existing batches](#4-getting-all-the-existing-batches)
 
 ## About the Project
-This project is a part of the [Flexyoga](
+
+Before writing a single-line of code, I spent a lot of time, **doing UI/ UX research, and performing extensive feasibility analysis**. After that pegged down the exact requirements and features that are must-haves and **created a Kanban Board** with all the features that must be implemented and started working on the project.
+
+I have built this project using **React, Material UI, React-Router-Dom, Node, Express, MongoDB, and Mongoose**. Speaking broadly, I have taken design inspiration from [Halo Lab's Design on Dribble](https://dribbble.com/shots/14398439-Oyoga-Website) and I have modified the design accordingly. 
+
+I have used Material UI, as it helps in reducing the redundant design components and enables in quicker development. One short-coming is definitely the lack of customisability, but I have **tried to overcome that by using CSS-in-JS.** 
+
+**Modularization, and resuability** of components have been given **higher weightage.** All validations are done on the frontend and only then the data is punched to the backend.
+
+A basic **caching strategy** has been implemented, which helps in reducing the number of read and write operations to the database. 
+
+**Client-Side Caching** using LocalStorage has been implemented which prevents an extra write before the payment confirmation is received using Web Hook(for now a mock function).
+
+On the backend, using Mongoose, **the models have been defined** and the data is stored in MongoDB Atlas. The ER diagram can be seen in the documentation. 
+
+The **routes have been seperated** from the entry file of index.js to have better readability and maintainability.
 
 ## Getting Started
+
+
 
 ### Prerequisites
 
