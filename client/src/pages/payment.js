@@ -1,22 +1,33 @@
 import React from 'react';
 import { Box, Typography, Button, Divider } from '@mui/material';
 import qr from '../assets/qr.jpeg';
+import { registerParticipant } from '../api/participantApi';
 
 const Payment = () => {
   const handleStripePayment = () => {
     window.open('https://buy.stripe.com/test_6oE8zZ3BF13T9cQ001');
   };
 
-  const handleReceipt = () => {
+  const handleReceipt = async () => {
     console.log("Receipt");
     const storedData=localStorage.getItem("data");
     const data=JSON.parse(storedData);
-    console.log(data);
-    //localStorage.clear();
-    if(data!=null)
-    window.location.href = '/successful';
-    else
-    window.location.href = '/failed';
+
+    if(data!=null){
+      try{
+        const response = await registerParticipant(data);
+        console.log(response);
+        if(response.status===200){
+          localStorage.clear();
+          window.location.href = '/successful';
+        }
+        else
+        window.location.href = '/failed';
+      }
+      catch(error){
+        console.log(error);
+      }
+    }
   };
 
   return (

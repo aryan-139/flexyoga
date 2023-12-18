@@ -11,10 +11,10 @@ router.post('/add', async (req, res) => {
     try{
         const participant = new Participant(req.body);
         await participant.save();
-        res.status(200).send(participant);
+        res.status(200).json(participant);
         console.log("Participant added successfully");
     }catch(err){
-        res.status(500).send(err);
+        res.status(500).json({ error: err.message || 'Internal Server Error' });
     }
 }
 );

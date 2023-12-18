@@ -47,14 +47,16 @@ const Practiser = () => {
       alert("Please accept the terms and conditions");
       return;
     }
+
+    const participant_id = Math.floor(Math.random() * 1000000000);
     const data={
+      participant_id: participant_id,
       name: fullname,
       email: email,
       age: age,
       gender: gender,
       phone: phoneNumber,
       enrollments: batch,
-      terms: terms
     }
     //cached in local storage
     localStorage.setItem("data", JSON.stringify(data));
