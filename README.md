@@ -6,7 +6,6 @@
   * [Table of Contents](#table-of-contents)
   * [About the Project](#about-the-project)
   * [Getting Started](#getting-started)
-    + [Prerequisites](#prerequisites)
     + [Installation](#installation)
   * [Usage](#usage)
     + [Frontend](#frontend)
@@ -17,6 +16,7 @@
     + [3. add a new batch](#3-add-a-new-batch)
     + [4. Delete all the entries from the participants collection](#4-delete-all-the-entries-from-the-participants-collection)
     + [4. getting all the existing batches](#4-getting-all-the-existing-batches)
+    [Gallery](#gallery)
 
 ## About the Project
 
@@ -38,17 +38,39 @@ The **routes have been seperated** from the entry file of index.js to have bette
 
 ## Getting Started
 
-
-
-### Prerequisites
-
 ### Installation
+Clone the repository: `git clone https://github.com/aryan-139/flexyoga.git`
 
 ## Usage
 
 ### Frontend
 
+### Prerequisites
+- [Node.js](https://nodejs.org/)
+
+### Installation
+1. Navigate to the client directory: `cd client`
+2. Install dependencies: `npm install`
+
+### Running the server
+1. Navigate to the server directory: `cd client`
+2. Run the server: `npm run start`
+3. The app will be running on `http://localhost:3000/`
+
 ### Backend
+
+### Prerequisites
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+
+### Installation
+1. Navigate to the server directory: `cd server`
+2. Install dependencies: `npm install`
+
+### Running the server
+1. Navigate to the server directory: `cd server`
+2. Run the server: `npm run start`
+3. The app will be running on `http://localhost:8001/`
 
 ## Backend API endpoints
 
@@ -103,3 +125,5 @@ The **routes have been seperated** from the entry file of index.js to have bette
     .
 ]
 ```
+
+## Gallery
