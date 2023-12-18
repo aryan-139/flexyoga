@@ -1,5 +1,29 @@
 # Flexyoga- A Modern Yoga Class Enrollment Platform 🧘‍♂️
-🧘‍♂️ Simplify yoga class enrollment! This cloud-native app supports monthly sign-ups, batch flexibility, and optimized performance. Dockerized for easy deployment. Clear documentation included. Join us on the path to wellness! 🌟
+🧘‍♂️ Simplify yoga class enrollment with FlexYoga! Intuitive design, which promotes higher conversion rates and resilient system architecture promoting consistent information exchange. Clear documentation included. Join us on the path to wellness! 🌟
+
+![Current Version](https://img.shields.io/badge/version-v1.0-blue)
+![GitHub contributors](https://img.shields.io/github/contributors/aryan-139/README-Template)
+![GitHub stars](https://img.shields.io/github/stars/aryan-139/README-Template?style=social)
+![GitHub forks](https://img.shields.io/github/forks/aryan-139/README-Template?style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/aryanintech_?style=social)
+
+## Table of Contents
+- [Flexyoga- A Modern Yoga Class Enrollment Platform 🧘‍♂️](#flexyoga--a-modern-yoga-class-enrollment-platform---)
+  * [Table of Contents](#table-of-contents)
+  * [About the Project](#about-the-project)
+  * [Getting Started](#getting-started)
+    + [Prerequisites](#prerequisites)
+    + [Installation](#installation)
+  * [Usage](#usage)
+    + [Frontend](#frontend)
+    + [Backend](#backend)
+  * [Backend API endpoints](#backend-api-endpoints)
+    + [1. adding new participants](#1-adding-new-participants)
+    + [2. getting all the existing participants](#2-getting-all-the-existing-participants)
+    + [3. add a new batch](#3-add-a-new-batch)
+    + [4. Delete all the entries from the participants collection](#4-delete-all-the-entries-from-the-participants-collection)
+    + [4. getting all the existing batches](#4-getting-all-the-existing-batches)
+
 
 ## Backend API endpoints
 
