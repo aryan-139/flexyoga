@@ -1,11 +1,23 @@
-import React from 'react'
+import React from 'react';
+const Practiser = () => {
+  const [name, setName]=React.useState('');
+  const [email, setEmail]=React.useState('');
+  const [phone, setPhone]=React.useState('');
+  const [age, setAge]=React.useState('');
+  const[gender, setGender]=React.useState('');
 
-const practiser = () => {
+  const handleSubmit = (e) => {
+    console.log('submitting');
+    e.preventDefault();
+  }
+
   return (
     <div>
-        <h1>FlexYoga-Test</h1>
+     
+      
+
     </div>
   )
 }
 
-export default practiser
+export default Practiser
