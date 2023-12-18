@@ -2,6 +2,12 @@ import React from 'react';
 import { LinearProgress, Box, Button, Checkbox, FormControl, FormControlLabel, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material';
 import { validateAge, validateEmail,validateContact, validateName } from '../utils/validators';
 //import ErrorModal from '../components/errorModal';
+import AutoCarousel from '../components/carousel';
+import img1 from '../assets/1.jpg';
+import img2 from '../assets/2.jpg';
+import img3 from '../assets/3.jpg';
+import img4 from '../assets/4.jpg';
+import img5 from '../assets/5.jpg';
 
 const Practiser = () => {
   const [firstName, setFirstName] = React.useState('');
@@ -15,6 +21,8 @@ const Practiser = () => {
   const [terms, setTerms] = React.useState(false);
   const [progress, setProgress] = React.useState(0);
   //const [closeErrorModal, setCloseErrorModal] = React.useState(false);
+
+  const images=[img1, img2, img3, img4, img5];
 
   const handleSubmit = (e) => {
     const fullname = firstName + ' ' + lastName;
@@ -176,6 +184,9 @@ const Practiser = () => {
       </Box>
 
       {/* carousel component */}
+      <Box sx={{backgroundColor:"whitesmoke", height:"770px", width:"850px", marginTop:"-770px", marginLeft:"800px"}}>
+      <AutoCarousel images={images} interval={3000} />
+      </Box>
     </div>
   );
 }

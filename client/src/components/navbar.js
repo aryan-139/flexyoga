@@ -1,12 +1,9 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
-import {useNavigate } from 'react-router-dom';
-
 
 const Navbar = () => {
   const[enroll, setEnroll] = React.useState(false);
   const[home, setHome] = React.useState(false);
-  const navigate = useNavigate();
   //hardcoded email for now
   const handleContactButtonClick = () => {
     window.open('mailto:aryanraj2k25@gmail.com');
@@ -22,11 +19,11 @@ const Navbar = () => {
   }
   if(home){
     setHome(false);
-    navigate('/');
+    window.location.href = '/';
   }
   if(enroll){
     setEnroll(false);
-   navigate('/practiser');
+    window.location.href = '/practiser';
 
   }
 
