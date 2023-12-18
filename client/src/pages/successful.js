@@ -2,8 +2,12 @@ import React from 'react';
 import { Typography } from '@mui/material';
 
 const PaymentSuccessful = () => {
+  console.log(localStorage.getItem("data"));
+
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      
+      
       <div
         style={{
           width: '50px',
@@ -24,6 +28,7 @@ const PaymentSuccessful = () => {
       <h1>Payment Successful</h1>
       <p>Your payment has been processed successfully.</p>
       <p>Please keep the payment receipt for your records.</p>
+    
       {/* You can add more information or links here */}
     </div>
   );
