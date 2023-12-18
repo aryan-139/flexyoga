@@ -1,12 +1,6 @@
 # Flexyoga- A Modern Yoga Class Enrollment Platform 🧘‍♂️
 🧘‍♂️ Simplify yoga class enrollment with FlexYoga! Intuitive design, which promotes higher conversion rates and resilient system architecture promoting consistent information exchange. Clear documentation included. Join us on the path to wellness! 🌟
 
-![Current Version](https://img.shields.io/badge/version-v1.0-blue)
-![Github Contributor](https://img.shields.io/badge/Github%20contributor?link=https%3A%2F%2Fgithub.com%2Faryan-139)
-![GitHub stars](https://img.shields.io/github/stars/aryan-139/README-Template?style=social)
-![GitHub forks](https://img.shields.io/github/forks/aryan-139/README-Template?style=social)
-![Twitter Follow](https://img.shields.io/twitter/follow/aryanintech_?style=social)
-
 ## Table of Contents
 - [Flexyoga- A Modern Yoga Class Enrollment Platform 🧘‍♂️](#flexyoga--a-modern-yoga-class-enrollment-platform---)
   * [Table of Contents](#table-of-contents)
@@ -24,6 +18,20 @@
     + [4. Delete all the entries from the participants collection](#4-delete-all-the-entries-from-the-participants-collection)
     + [4. getting all the existing batches](#4-getting-all-the-existing-batches)
 
+## About the Project
+This project is a part of the [Flexyoga](
+
+## Getting Started
+
+### Prerequisites
+
+### Installation
+
+## Usage
+
+### Frontend
+
+### Backend
 
 ## Backend API endpoints
 
