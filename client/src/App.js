@@ -33,7 +33,10 @@ function App() {
       <Grid container spacing={2} justifyContent="center" marginTop={"30px"}>
       {/* Card 1 */}
       <Grid item>
-        <Card style={{ backgroundColor: '#ffcc00', height:130,width: 400, borderRadius:"0",color:"black",boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)" }}>
+        <Card style={{ backgroundColor: '#ffcc00', height:130,width: 400, borderRadius:"0",color:"black",boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)", transition: "transform 0.3s",  // Transition property for the tilt effect
+          '&:hover': {
+            transform: "scale(1.05) rotate(3deg)",  // Tilt effect on hover
+          }, }}>
           <CardContent>
             <Typography variant="h6">Explore Diverse Yoga Classes</Typography>
             <Typography variant="body2">
@@ -46,7 +49,10 @@ function App() {
 
       {/* Card 2 */}
       <Grid item>
-        <Card style={{ backgroundColor: '#084831', height:130,width: 400, borderRadius:"0",color:"white",boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)" }}>
+        <Card style={{ backgroundColor: '#084831', height:130,width: 400, borderRadius:"0",color:"white",boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)", transition: "transform 0.3s",  // Transition property for the tilt effect
+          '&:hover': {
+            transform: "scale(1.05) rotate(3deg)",  // Tilt effect on hover
+          }, }}>
           <CardContent>
             <Typography variant="h6">Meditation Sessions</Typography>
             <Typography variant="body2">
@@ -59,7 +65,10 @@ function App() {
 
       {/* Card 3 */}
       <Grid item>
-        <Card style={{ backgroundColor: '#ff5645',height:130, width: 400, borderRadius:"0", color:"white", boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)"}}>
+        <Card style={{ backgroundColor: '#ff5645',height:130, width: 400, borderRadius:"0", color:"white", boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)", transition: "transform 0.3s",  // Transition property for the tilt effect
+          '&:hover': {
+            transform: "scale(1.05) rotate(3deg)",  // Tilt effect on hover
+          },}}>
           <CardContent>
             <Typography variant="h6">Wellness Workshops</Typography>
             <Typography variant="body2">
