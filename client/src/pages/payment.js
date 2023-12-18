@@ -10,7 +10,8 @@ const Payment = () => {
   const handleReceipt = () => {
     console.log("Receipt");
     const storedData=localStorage.getItem("data");
-    console.log(storedData);
+    const data=JSON.parse(storedData);
+    console.log(data);
     //localStorage.clear();
   };
 
