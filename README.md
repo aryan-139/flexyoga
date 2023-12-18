@@ -2,7 +2,7 @@
 🧘‍♂️ Simplify yoga class enrollment with FlexYoga! Intuitive design, which promotes higher conversion rates and resilient system architecture promoting consistent information exchange. Clear documentation included. Join us on the path to wellness! 🌟
 
 ![Current Version](https://img.shields.io/badge/version-v1.0-blue)
-![GitHub contributors](https://img.shields.io/github/contributors/aryan-139/README-Template)
+![Github Contributor](https://img.shields.io/badge/Github%20contributor?link=https%3A%2F%2Fgithub.com%2Faryan-139)
 ![GitHub stars](https://img.shields.io/github/stars/aryan-139/README-Template?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/aryan-139/README-Template?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/aryanintech_?style=social)
