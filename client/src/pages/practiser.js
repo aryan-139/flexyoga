@@ -50,9 +50,14 @@ const Practiser = () => {
     }
     //cached in local storage
     localStorage.setItem("data", JSON.stringify(data));
-    console.log(data);
+    //console.log(data);
 
-
+    //redirect to payment page
+    if(progress===100)
+    window.location.href = "/payment";
+    else{
+      alert("Please fill all the fields");
+    }  
     e.preventDefault();
   }
 

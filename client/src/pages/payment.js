@@ -9,6 +9,9 @@ const Payment = () => {
 
   const handleReceipt = () => {
     console.log("Receipt");
+    const storedData=localStorage.getItem("data");
+    console.log(storedData);
+    //localStorage.clear();
   };
 
   return (
