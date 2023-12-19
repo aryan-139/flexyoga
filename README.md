@@ -7,16 +7,17 @@
   * [About the Project](#about-the-project)
   * [Getting Started](#getting-started)
     + [Installation](#installation)
-  * [Usage](#usage)
-    + [Frontend](#frontend)
-    + [Backend](#backend)
+    + [Prerequisites](#prerequisites)
+    + [Installation](#installation-1)
+    + [Running the servers](#running-the-servers)
   * [Backend API endpoints](#backend-api-endpoints)
     + [1. adding new participants](#1-adding-new-participants)
     + [2. getting all the existing participants](#2-getting-all-the-existing-participants)
     + [3. add a new batch](#3-add-a-new-batch)
     + [4. Delete all the entries from the participants collection](#4-delete-all-the-entries-from-the-participants-collection)
     + [4. getting all the existing batches](#4-getting-all-the-existing-batches)
-    [Gallery](#gallery)
+    + [5. Payment Confirmation Endpoint](#5-payment-confirmation-endpoint)
+  * [Gallery](#gallery)
 
 ## About the Project
 
@@ -43,47 +44,37 @@ The **routes have been seperated** from the entry file of index.js to have bette
 ### Installation
 Clone the repository: `git clone https://github.com/aryan-139/flexyoga.git`
 
-## Usage
-
-### Frontend
-
-### Prerequisites
-- [Node.js](https://nodejs.org/)
-
-### Installation
-1. Navigate to the client directory: `cd client`
-2. Install dependencies: `npm install`
-
-### Running the server
-1. Navigate to the server directory: `cd client`
-2. Run the server: `npm run start`
-3. The app will be running on `http://localhost:3000/`
-
-### Backend
-
 ### Prerequisites
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/)
 
 ### Installation
-1. Navigate to the server directory: `cd server`
+1. Navigate to the client directory: `cd client`
 2. Install dependencies: `npm install`
+3. Navigate to the server directory: `cd server`
+4. Install dependencies: `npm install`
 
-### Running the server
-1. Navigate to the server directory: `cd server`
+### Running the servers
+1. Navigate to the client directory: `cd client`
 2. Run the server: `npm run start`
-3. The app will be running on `http://localhost:8001/`
+3. The app will be running on `http://localhost:3000/`
+4. Open another terminal
+5. Navigate to the server directory: `cd server`
+6. Run the server: `npm run dev`
+7. The server will be running on `http://localhost:80`
+
 
 ## Backend API endpoints
 
 ### 1. adding new participants
 
-- POST(http://localhost:8001/participants/add)
+- POST(http://localhost:80/participants/add)
 - Body:
 ```
 {
-  "participant_id": "1",
+  "participant_id": "16483927333",
   "name": "John Doe",
+  "email": "test@john.com",
   "age": 30,
   "gender": "Male",
   "phone": "1234567890",
@@ -93,10 +84,10 @@ Clone the repository: `git clone https://github.com/aryan-139/flexyoga.git`
 
 ### 2. getting all the existing participants
 
-- GET(http://localhost:8001/participants/get)
+- GET(http://localhost:80/participants/get)
 
 ### 3. add a new batch
-- POST(http://localhost:8001/batches/add)
+- POST(http://localhost:80/batches/add)
 - Body:
 ```
 {
@@ -107,11 +98,11 @@ Clone the repository: `git clone https://github.com/aryan-139/flexyoga.git`
 ```
 
 ### 4. Delete all the entries from the participants collection
-- GET (http://localhost:8001/participants/delete)
+- GET (http://localhost:80/participants/delete)
 
 ### 4. getting all the existing batches
 
-- GET(http://localhost:8001/batches/get)
+- GET(http://localhost:80/batches/get)
 - Payload:
 ```
 [
@@ -128,4 +119,25 @@ Clone the repository: `git clone https://github.com/aryan-139/flexyoga.git`
 ]
 ```
 
+### 5. Payment Confirmation Endpoint
+
+- POST(http://localhost:80/payment/confirm)
+- Body: from the payment gateway's webhook
+
+- Payload:
+```
+{
+    "success": true,
+    "paymentId": 848719,
+    "paymentDate": "2023-12-19T21:51:25.907Z",
+    "paymentStatus": "success",
+    "paymentAmount": 500,
+    "paymentMethod": "stripe"
+}
+```
+
 ## Gallery
+
+- Home Page
+![Home Page](https://github.com/aryan-139/flexyoga/blob/main/client/src/assets/home.png)
+
