@@ -2,10 +2,10 @@ import React from 'react';
 import { Box, Typography, Button, Divider } from '@mui/material';
 import qr from '../assets/qr.jpeg';
 import { registerParticipant } from '../api/participantApi';
-import participantContext from '../context/participantContext';
+//import participantContext from '../context/participantContext';
+import { registerPayment } from '../api/paymentApi';
 
 const Payment = () => {
-  const { updateParticipant } = React.useContext(participantContext);
   const handleStripePayment = () => {
     window.open('https://buy.stripe.com/test_6oE8zZ3BF13T9cQ001');
   };
@@ -20,12 +20,23 @@ const Payment = () => {
         const response = await registerParticipant(data);
         console.log(response);
         if(response.status===200){
-          updateParticipant(response.data);
-          //localStorage.clear();
-          window.location.href = '/successful';
+          try{
+            const paymentData=await registerPayment(data);
+            console.log(paymentData);
+            if(paymentData.status===200){
+              window.location.href = '/successful';
+            }
+          }
+          catch(error){
+            localStorage.clear();
+            window.location.href = '/failed';
+          }
         }
-        else
-        window.location.href = '/failed';
+        else{
+          localStorage.clear();
+          window.location.href = '/failed';
+        }
+       
       }
       catch(error){
         console.log(error);
