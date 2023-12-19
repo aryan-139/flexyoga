@@ -6,11 +6,17 @@ import { registerParticipant } from '../api/participantApi';
 import { registerPayment } from '../api/paymentApi';
 
 const Payment = () => {
+  const screenWidth = window.screen.width;
+  const screen = screenWidth > 768 ? 'desktop' : 'mobile';
+
   const handleStripePayment = () => {
     window.open('https://buy.stripe.com/test_6oE8zZ3BF13T9cQ001');
   };
 
   const handleReceipt = async () => {
+    if(screen==="mobile"){
+      window.location.href = '/successful';
+    }
     console.log("Receipt");
     const storedData=localStorage.getItem("data");
     const data=JSON.parse(storedData);
@@ -28,7 +34,7 @@ const Payment = () => {
             }
           }
           catch(error){
-            localStorage.clear();
+            //localStorage.clear();
             window.location.href = '/failed';
           }
         }
@@ -41,6 +47,9 @@ const Payment = () => {
       catch(error){
         console.log(error);
       }
+    }
+    else{
+      window.location.href = '/failed';
     }
   };
 
@@ -69,13 +78,21 @@ const Payment = () => {
         <Typography variant="body1" sx={{ marginTop: '10px', marginBottom: '15px' }}>
           Use the secure Stripe payment gateway to complete your transaction.
         </Typography>
-        <Button variant="contained" onClick={handleStripePayment} sx={{ marginTop: '15px', backgroundColor:"#ffc700", marginLeft:"370px" }}>
-          Pay via Stripe
-        </Button>
+        {screen === "desktop" && (
+            <Button variant="contained" onClick={handleStripePayment} sx={{ marginTop: '15px', backgroundColor: "#ffc700", marginLeft: "70%" }}>
+              Pay via Stripe
+            </Button>
+        )}
+        {screen === "mobile" && (
+            <Button variant="contained" onClick={handleStripePayment} sx={{ marginTop: '15px', backgroundColor: "#ffc700", marginLeft: "60%" }}>
+              Pay via Stripe
+            </Button>
+        )}
+              
       </Box>
 
 
-      <Button variant="contained" onClick={handleReceipt} sx={{backgroundColor:"#ffc700", marginLeft:"0px", marginTop:"20px", width: "550px"}}>
+      <Button variant="contained" onClick={handleReceipt} sx={{backgroundColor:"#ffc700", marginLeft:"0px", marginTop:"20px", width: "100%"}}>
           Get Payment Receipt
       </Button>
 
