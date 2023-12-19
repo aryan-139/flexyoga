@@ -38,12 +38,12 @@ async function main() {
 //Connecting frontend, use when frontend build is generated and ready to be deployed.
 //Serve static files from the React app in production
 
-    // app.use(express.static(path.join(path.resolve(), './client/build')));
-    // app.get('*', function (req, res) {
-    //     res.sendFile(path.join(path.resolve(), "./client/build/index.html"), function (err) {
-    //         res.status(500).send(err);
-    //     })
-    // });
+    app.use(express.static(path.join(path.resolve(), './client/build')));
+    app.get('*', function (req, res) {
+        res.sendFile(path.join(path.resolve(), "./client/build/index.html"), function (err) {
+            res.status(500).send(err);
+        })
+    });
 
 
 
