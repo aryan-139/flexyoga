@@ -24,10 +24,11 @@ const Payment = () => {
     if(data!=null){
       try{
         const response = await registerParticipant(data);
-        console.log(response);
+        //console.log(response);
         if(response.status===200){
           try{
             const paymentData=await registerPayment(data);
+            localStorage.setItem("paymentData", JSON.stringify(paymentData));
             console.log(paymentData);
             if(paymentData.status===200){
               window.location.href = '/successful';

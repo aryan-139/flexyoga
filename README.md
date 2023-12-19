@@ -22,7 +22,9 @@
 
 Before writing a single-line of code, I spent a lot of time, **doing UI/ UX research, and performing extensive feasibility analysis**. After that pegged down the exact requirements and features that are must-haves and **created a Kanban Board** with all the features that must be implemented and started working on the project.
 
-I have built this project using **React, Material UI, React-Router-Dom, Node, Express, MongoDB, and Mongoose**. Speaking broadly, I have taken design inspiration from [Halo Lab's Design on Dribble](https://dribbble.com/shots/14398439-Oyoga-Website) and I have modified the design accordingly. 
+I have built this project using **React, Material UI, React-Router-Dom, Node, Express, MongoDB, and Mongoose**. Speaking broadly, I have taken design inspiration from [Halo Lab's Design on Dribble](https://dribbble.com/shots/14398439-Oyoga-Website) and I have modified the design accordingly.
+
+During user onboarding, **attention has been paid to UX** by incorporating a progressive bar which helps the user to know how much of the process is completed.
 
 I have used Material UI, as it helps in reducing the redundant design components and enables in quicker development. One short-coming is definitely the lack of customisability, but I have **tried to overcome that by using CSS-in-JS.** 
 

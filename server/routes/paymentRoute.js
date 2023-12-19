@@ -11,13 +11,21 @@ const router = require('express').Router();
 router.post('/confirm', async(req, res) =>{
     try{
         const val=Math.random();
+        const paymentId=Math.floor(Math.random()*1000000);
+        const paymentDate=new Date();
+        const paymentStatus="success";
+        const paymentAmount=500;
+        const paymentMethod="stripe";
+
         if(val>0.5){
             setTimeout(() => {
-                res.status(200).json({success: true});
+                console.log("Payment confirmed");
+                res.status(200).json({success: true, paymentId: paymentId, paymentDate: paymentDate, paymentStatus: paymentStatus, paymentAmount: paymentAmount, paymentMethod: paymentMethod});
             }, 6000);
         }
         else{
             setTimeout(() => {
+                console.log("Payment failed");
                 res.status(200).json({success: false});
             }, 6000);
         }  

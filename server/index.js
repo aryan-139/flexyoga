@@ -44,4 +44,4 @@ app.listen(PORT, ()=>{
 
 app.use("/participants", participantRoute);
 app.use("/batches", batchRoutes);
-app.use("/payment", paymentRoute )
+app.use("/payment", paymentRoute );
