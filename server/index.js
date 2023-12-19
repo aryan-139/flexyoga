@@ -11,7 +11,7 @@ const participantRoute=require('./routes/participantRoute');
 const batchRoutes=require('./routes/batchRoute');
 const paymentRoute=require('./routes/paymentRoute');
 
-const PORT=8001;
+const PORT = process.env.PORT || 80;
 const app=express();
 
 //configurations
