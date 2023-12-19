@@ -18,6 +18,9 @@
     + [4. getting all the existing batches](#4-getting-all-the-existing-batches)
     + [5. Payment Confirmation Endpoint](#5-payment-confirmation-endpoint)
   * [Gallery](#gallery)
+    + [Desktop View](#desktop-view)
+    + [Mobile View](#mobile-view)
+  * [Future Scope](#future-scope)
 
 ## About the Project
 
@@ -140,19 +143,20 @@ Clone the repository: `git clone https://github.com/aryan-139/flexyoga.git`
 
 ### Desktop View
 
-- Home Page
+- Home Page- inspiration from [Halo Lab's Design on Dribble](https://dribbble.com/shots/14398439-Oyoga-Website)
+
 ![Home Page](https://github.com/aryan-139/flexyoga/blob/main/client/src/assets/home.png)
 
-- User Onboarding
+- User Onboarding- progress bar for better UX
 ![Form](https://github.com/aryan-139/flexyoga/blob/8d8d352c6953ced24aa126a57e1bbedf5000fcba/client/src/assets/form.png)
 
-- Payment Page
+- Payment Page- Stripe Payment Link Integration, QR code for UPI payments, and a mock payment confirmation function
 ![Payment Page](https://github.com/aryan-139/flexyoga/blob/8d8d352c6953ced24aa126a57e1bbedf5000fcba/client/src/assets/payment.png)
 
-- Payment Confirmation
+- Payment Confirmation- Mock Payment Confirmation Function with important details
 ![Payment Confirmation](https://github.com/aryan-139/flexyoga/blob/8d8d352c6953ced24aa126a57e1bbedf5000fcba/client/src/assets/confirmation.png)
 
-- Downloadable Receipt
+- Downloadable Receipt- Downloadable Receipt with all the details, for manual confirmation in case of discrepancies
 ![Receipt](https://github.com/aryan-139/flexyoga/blob/8d8d352c6953ced24aa126a57e1bbedf5000fcba/client/src/assets/receipt.png)
 
 ### Mobile View
@@ -163,3 +167,12 @@ Clone the repository: `git clone https://github.com/aryan-139/flexyoga.git`
 
 - Payment Confirmation, Downloadable Receipt
 ![Mobile View](https://github.com/aryan-139/flexyoga/blob/main/client/src/assets/mobile%20second.png)
+
+
+## Future Scope
+
+- Implementing an API limit to prevent DDOS attacks since we have mock function for now 
+- Implementing a CI/CD workflow on Azure
+- Containerizing the application using Docker
+- Adding an Instructor Dashboard
+- Implementing a proper authentication system 
