@@ -153,7 +153,7 @@ Clone the repository: `git clone https://github.com/aryan-139/flexyoga.git`
 - Payment Page- Stripe Payment Link Integration, QR code for UPI payments, and a mock payment confirmation function
 ![Payment Page](https://github.com/aryan-139/flexyoga/blob/8d8d352c6953ced24aa126a57e1bbedf5000fcba/client/src/assets/payment.png)
 
-- Payment Confirmation- Mock Payment Confirmation Function with important details
+- Payment Confirmation- Mock Payment Confirmation Function with important details, which assigns value based on random number generation
 ![Payment Confirmation](https://github.com/aryan-139/flexyoga/blob/8d8d352c6953ced24aa126a57e1bbedf5000fcba/client/src/assets/confirmation.png)
 
 - Downloadable Receipt- Downloadable Receipt with all the details, for manual confirmation in case of discrepancies
