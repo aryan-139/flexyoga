@@ -141,3 +141,15 @@ Clone the repository: `git clone https://github.com/aryan-139/flexyoga.git`
 - Home Page
 ![Home Page](https://github.com/aryan-139/flexyoga/blob/main/client/src/assets/home.png)
 
+- User Onboarding
+![Form](https://github.com/aryan-139/flexyoga/blob/8d8d352c6953ced24aa126a57e1bbedf5000fcba/client/src/assets/form.png)
+
+- Payment Page
+![Payment Page](https://github.com/aryan-139/flexyoga/blob/8d8d352c6953ced24aa126a57e1bbedf5000fcba/client/src/assets/payment.png)
+
+- Payment Confirmation
+![Payment Confirmation](https://github.com/aryan-139/flexyoga/blob/8d8d352c6953ced24aa126a57e1bbedf5000fcba/client/src/assets/confirmation.png)
+
+- Downloadable Receipt
+![Receipt](https://github.com/aryan-139/flexyoga/blob/8d8d352c6953ced24aa126a57e1bbedf5000fcba/client/src/assets/receipt.png)
+
