@@ -176,3 +176,12 @@ Clone the repository: `git clone https://github.com/aryan-139/flexyoga.git`
 - Containerizing the application using Docker
 - Adding an Instructor Dashboard
 - Implementing a proper authentication system 
+
+## Ideation Phase 
+
+- Wireframing 
+![Wireframe](https://github.com/aryan-139/flexyoga/blob/main/client/src/assets/wireframe1.png)
+
+- ER Diagram
+![ER Diagram](https://github.com/aryan-139/flexyoga/blob/main/client/src/assets/wireframe2.png)
+
