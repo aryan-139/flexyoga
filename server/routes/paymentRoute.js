@@ -26,7 +26,7 @@ router.post('/confirm', async(req, res) =>{
         else{
             setTimeout(() => {
                 console.log("Payment failed");
-                res.status(200).json({success: false});
+                res.status(400).json({success: false});
             }, 6000);
         }  
     }

@@ -34,6 +34,8 @@ const Payment = () => {
             console.log(paymentData);
             if(paymentData.status===200){
               window.location.href = '/successful';
+            }else{
+              window.location.href = '/failed';
             }
           }
           catch(error){

@@ -8,6 +8,6 @@ export const registerPayment= async(postData)=>{
     }
     catch(error){
         console.log(error);
-        return error.response.data;
+        return {status: 400};
     }
 }
