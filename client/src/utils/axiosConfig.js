@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiosApi = axios.create({
-    baseURL: 'http://localhost:8001',
+    baseURL: 'https://flexyogav5.azurewebsites.net/',
 })
 
 export default axiosApi;

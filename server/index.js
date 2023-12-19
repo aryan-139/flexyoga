@@ -10,6 +10,8 @@ const participantRoute=require('./routes/participantRoute');
 // const enrollmentRoutes=require('./routes/enrollmentRoute');
 const batchRoutes=require('./routes/batchRoute');
 const paymentRoute=require('./routes/paymentRoute');
+const path = require('path');
+
 
 const PORT = process.env.PORT || 80;
 const app=express();
@@ -32,6 +34,19 @@ async function main() {
   });
     console.log("Pinged the MongoDB Atlas Cluster. You successfully connected to MongoDB!");
 }
+
+//Connecting frontend, use when frontend build is generated and ready to be deployed.
+//Serve static files from the React app in production
+
+    app.use(express.static(path.join(path.resolve(), '../client/build')));
+    app.get('*', function (req, res) {
+        res.sendFile(path.join(path.resolve(), "../client/build/index.html"), function (err) {
+            res.status(500).send(err);
+        })
+    });
+
+
+
 
 //initialize the server
 
