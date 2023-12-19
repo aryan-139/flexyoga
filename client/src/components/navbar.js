@@ -1,6 +1,10 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Drawer, ListItem, List } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import MailIcon from '@mui/icons-material/Mail';
+import EventNoteIcon from '@mui/icons-material/EventNote';
 
 const Navbar = () => {
   const[enroll, setEnroll] = React.useState(false);
@@ -61,28 +65,33 @@ const Navbar = () => {
     )}
     {device === 'mobile' && (
         <>
-          <AppBar position="static" sx={{ backgroundColor: "#ffffff", boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.1)', height: "70px" }}>
+          <AppBar position="static" sx={{ backgroundColor: "#ffffff", boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.1)', height: "60px" }}>
             <Toolbar>
-              <Button onClick={toggleDrawer(true)} sx={{ textTransform: 'capitalize', color: "black", marginLeft: "30px" }}>
+              <Button onClick={toggleDrawer(true)} sx={{ textTransform: 'capitalize', color: "black", marginLeft: "0px" }}>
                 <MenuIcon />
               </Button>
-              <Typography variant="h4" component="div" sx={{ flexGrow: 1, fontFamily: 'Parisian', color: "black" }}>
+              <Typography onClick={handleHomeButtonClick} variant="h4" component="div" sx={{ flexGrow: 1, fontFamily: 'Parisian', color: "black" }}>
                 FlexYoga
               </Typography>
             </Toolbar>
           </AppBar>
-          <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
+          <Drawer anchor="top" open={drawerOpen} onClose={toggleDrawer(false)}>
             <List>
               <ListItem button onClick={handleHomeButtonClick}>
+                <HomeIcon />
                 <Typography variant="body1">Home</Typography>
               </ListItem>
+            
               <ListItem button onClick={handleAboutButtonClick}>
+                <InfoIcon />
                 <Typography variant="body1">About</Typography>
               </ListItem>
               <ListItem button onClick={handleContactButtonClick}>
+                <MailIcon />
                 <Typography variant="body1">Contact</Typography>
               </ListItem>
               <ListItem button onClick={handleEnrollBatchFunction}>
+                <EventNoteIcon />
                 <Typography variant="body1">Enroll in Batch</Typography>
               </ListItem>
             </List>
