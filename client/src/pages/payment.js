@@ -14,10 +14,12 @@ const Payment = () => {
   };
 
   const handleReceipt = async () => {
+    
+    //bad coding
     if(screen==="mobile"){
       window.location.href = '/successful';
     }
-    console.log("Receipt");
+    //hardcoded mobile result for now above code
     const storedData=localStorage.getItem("data");
     const data=JSON.parse(storedData);
 
