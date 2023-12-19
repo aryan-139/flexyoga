@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Button, Divider } from '@mui/material';
+import { Box, Typography, Button, Divider,CircularProgress } from '@mui/material';
 import qr from '../assets/qr.jpeg';
 import { registerParticipant } from '../api/participantApi';
 //import participantContext from '../context/participantContext';
@@ -8,13 +8,14 @@ import { registerPayment } from '../api/paymentApi';
 const Payment = () => {
   const screenWidth = window.screen.width;
   const screen = screenWidth > 768 ? 'desktop' : 'mobile';
+  const [loading, setLoading] = React.useState(false);
 
   const handleStripePayment = () => {
     window.open('https://buy.stripe.com/test_6oE8zZ3BF13T9cQ001');
   };
 
   const handleReceipt = async () => {
-    
+    setLoading(true);
     //bad coding
     if(screen==="mobile"){
       window.location.href = '/successful';
@@ -56,6 +57,7 @@ const Payment = () => {
     else{
       window.location.href = '/failed';
     }
+    setLoading(false);
   };
 
   return (
@@ -98,7 +100,11 @@ const Payment = () => {
 
 
       <Button variant="contained" onClick={handleReceipt} sx={{backgroundColor:"#ffc700", marginLeft:"0px", marginTop:"20px", width: "100%"}}>
-          Get Payment Receipt
+      {loading ? (
+            <CircularProgress size={24} color="inherit" />
+          ) : (
+            'Get Payment Receipt'
+          )}
       </Button>
 
       <Typography variant="body2" sx={{ marginTop: '20px', color: 'white' }}>
