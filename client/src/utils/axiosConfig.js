@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiosApi = axios.create({
-    baseURL: 'http://localhost:80',
+    baseURL: 'https://tan-unusual-blackbuck.cyclic.app',
 })
 
 export default axiosApi;
