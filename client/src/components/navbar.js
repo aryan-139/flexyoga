@@ -43,6 +43,10 @@ const Navbar = () => {
     setDrawerOpen(open);
   };
 
+  const handleManageClassesButtonClick = () => {
+    window.location.href = '/instructor';
+  }
+
 
   return (
   <div>
@@ -57,8 +61,8 @@ const Navbar = () => {
             FlexYoga
           </Typography>
 
-          <Button sx={{ textTransform: 'capitalize', color: "black" }}>Manage Classes</Button>
-          <Button onClick={handleEnrollBatchFunction} sx={{ textTransform: 'capitalize', color: "white", borderRadius: "0", marginRight: "80px", backgroundColor: "#e0544e", '&:hover': { backgroundColor: '#702a27' } }}>Enroll in Batch</Button>
+          <Button onClick={handleManageClassesButtonClick} sx={{ textTransform: 'capitalize', color: "black" }}>Manage Classes</Button>
+          <Button onClick={handleEnrollBatchFunction} sx={{ textTransform: 'capitalize', color: "white", borderRadius: "0", marginRight: "7%", backgroundColor: "#e0544e", '&:hover': { backgroundColor: '#702a27' } }}>Enroll in Batch</Button>
 
         </Toolbar>
       </AppBar>

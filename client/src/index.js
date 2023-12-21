@@ -10,6 +10,7 @@ import Payment from './pages/payment';
 import Successful from './pages/successful';
 import Failed from './pages/failed';
 import ParticipantProvider from './context/participantProvider';
+import Instructor from './pages/instructor';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,7 @@ root.render(
         <Route path="/payment" element={<Payment />} />
         <Route path="/successful" element={<Successful />} />
         <Route path="/failed" element={<Failed />} />
+        <Route path="/instructor" element={<Instructor />} />
         
       </Routes>
       </ParticipantProvider>
